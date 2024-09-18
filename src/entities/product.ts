@@ -26,7 +26,7 @@ export class Product {
       <div class="info-food">
         <span class="category">${this._category}</span>
         <span class="name">${this._name}</span>
-        <span class="price">${this._price}</span>
+        <span class="price">R$${this._price}</span>
       </div>
     </div>
     `;
