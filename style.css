@@ -19,7 +19,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   height: 250px;
   width: 250px;
   margin-top: 20px;
@@ -39,7 +38,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .btn-cart {
@@ -47,7 +45,7 @@ body {
   border-radius: 20px;
   position: absolute;
   bottom: -15px;
-  left: 70px;
+  left: 65px;
   padding: 8px 16px;
   margin-top: 10px;
   cursor: pointer;
@@ -61,19 +59,19 @@ body {
 }
 
 .info-food {
+  display: flex;
+  flex-direction: column;
   text-align: left;
   margin-top: 30px;
   width: 250px;
 }
 
 .category {
-  display: block;
   font-size: 12px;
   color: #9e9e9e;
 }
 
 .name {
-  display: block;
   font-size: 16px;
   font-weight: bold;
   margin-top: 5px;
