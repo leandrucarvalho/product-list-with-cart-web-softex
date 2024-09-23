@@ -18,15 +18,17 @@ body {
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas grandes */
-  gap: 20px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Ajuste dinâmico */
+  gap: 20px; /* Espaçamento uniforme entre itens */
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 250px;
   width: 250px;
   margin-top: 20px;
 }
