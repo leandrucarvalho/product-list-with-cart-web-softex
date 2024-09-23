@@ -6,6 +6,7 @@ export class Product {
   private _price: number;
   private _category: string;
   private _imageUrl: string;
+  private _quantity: number = 0;
 
   constructor(name: string, price: number, category: string, image: string) {
     this._name = name;
@@ -30,5 +31,21 @@ export class Product {
       </div>
     </div>
     `;
+  }
+
+  get price(): number {
+    return this._price;
+  }
+
+  get name(): string {
+    return this._name;
+  }
+
+  get quantity(): number {
+    return this._quantity;
+  }
+
+  set quantity(quantity: number) {
+    this._quantity += quantity;
   }
 }
