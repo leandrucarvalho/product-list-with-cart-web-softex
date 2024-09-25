@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import { Cart } from "./cart";
 
 export class Product {
   private _id: string = uuidv4();
@@ -7,6 +8,7 @@ export class Product {
   private _category: string;
   private _imageUrl: string;
   private _quantity: number = 0;
+  private _totalPrice: number = 0;
 
   constructor(name: string, price: number, category: string, image: string) {
     this._name = name;
@@ -55,6 +57,25 @@ export class Product {
     `;
   }
 
+  updateTotalPrice() {
+    this._totalPrice = this._price * this._quantity;
+  }
+
+  incrementQuantity() {
+    this._quantity += 1;
+    this.updateTotalPrice();
+
+    Cart.addProduct(this);
+  }
+
+  decrementQuantity() {
+    this._quantity -= 1;
+  }
+
+  get totalPrice() {
+    return this._totalPrice;
+  }
+
   get price(): number {
     return this._price;
   }
@@ -68,7 +89,7 @@ export class Product {
   }
 
   set quantity(quantity: number) {
-    this._quantity += quantity;
+    this._quantity = quantity;
   }
 
   get id(): string {
