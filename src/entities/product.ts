@@ -20,9 +20,14 @@ export class Product {
   render(): string {
     return `
     <div class="container">
-      <div class="img-food">
-        <img src="${this._imageUrl}" alt="${this._category}" />
-            <button class="btn-cart">
+          <div class="img-food">
+            <img
+              src="${this._imageUrl}"
+              alt="${this._name}"
+            />
+            <button
+              class="btn-cart bg-white border border-[#f44336] flex absolute -bottom-4 right-12 items-center justify-center gap-2 rounded-full px-6 py-2 text-xs text-black transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-black/50 active:scale-95 active:shadow-lg active:shadow-black/50 font-bold"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"
@@ -47,13 +52,13 @@ export class Product {
               </svg>
               Add to Cart
             </button>
-      </div>
-      <div class="info-food">
-        <span class="category">${this._category}</span>
-        <span class="name">${this._name}</span>
-        <span class="price">R$${this._price}</span>
-      </div>
-    </div>
+          </div>
+          <div class="info-food">
+            <span class="category">${this._category}</span>
+            <span class="name">${this._name}</span>
+            <span class="price">$${this._price}</span>
+          </div>
+        </div>
     `;
   }
 
