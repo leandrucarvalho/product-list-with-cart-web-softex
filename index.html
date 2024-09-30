@@ -18,19 +18,21 @@
     <title>Frontend Mentor | Product list with cart</title>
   </head>
   <body>
-    <main class="main flex flex-col min-h-screen">
+    <main
+      class="main grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr, 1fr] gap-x-4 min-h-screen"
+    >
       <h1 class="title text-xl font-bold">Sobremesas</h1>
       <div id="product-list" class="product-list"></div>
       <div
         id="shopping-cart"
-        class="cart sm:fixed sm:bottom-0 sm:left-0 sm:right-0 bg-white border rounded-xl p-4 flex flex-col md:p-4 md:absolute md:top-0 md:right-0 md:max-w-xs md:h-96"
+        class="cart bg-white border rounded-xl p-4 flex flex-col max-w-xs md:h-96 space-y-2"
       >
         <h2 class="font-bold text-[#f44336] text-xl">
           Your Cart (<span id="cart-count">7</span>)
         </h2>
         <div id="cart-items">
-          <div class="cart-item">
-            <div class="item-details">
+          <div class="cart-item flex flex-col">
+            <div class="item-details text-xs font-bold flex justify-between">
               <span class="product-name">Nome Do Produto</span>
               <button
                 class="remove-btn flex border-2 border-[#c9aea6] rounded-full p-0.5 text-xs text-black transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-black/50 active:scale-95 active:shadow-lg active:shadow-black/50"
@@ -49,12 +51,13 @@
                 </svg>
               </button>
             </div>
-            <div class="item-info">
-              <span class="quantity">2x</span>
-              <span class="unit-price">$10.00</span>
-              <span class="total-price">$20.00</span>
+            <div class="item-info text-xs">
+              <span class="quantity text-[#f44336] font-bold">2x</span>
+              <span class="unit-price text-[#c9aea6]">$10.00</span>
+              <span class="total-price text-[#ad8985]">$20.00</span>
+              <div class="border-b-2 border-[#c9aea6] text-xs my-3"></div>
             </div>
-            <div class="item-details">
+            <div class="item-details text-xs font-bold flex justify-between">
               <span class="product-name">Nome Do Produto</span>
               <button
                 class="remove-btn flex border-2 border-[#c9aea6] rounded-full p-0.5 text-xs text-black transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-black/50 active:scale-95 active:shadow-lg active:shadow-black/50"
@@ -73,12 +76,13 @@
                 </svg>
               </button>
             </div>
-            <div class="item-info">
-              <span class="quantity">2x</span>
-              <span class="unit-price">$10.00</span>
-              <span class="total-price">$20.00</span>
+            <div class="item-info text-xs">
+              <span class="quantity text-[#f44336] font-bold">2x</span>
+              <span class="unit-price text-[#c9aea6]">$10.00</span>
+              <span class="total-price text-[#ad8985]">$20.00</span>
+              <div class="border-b-2 border-[#c9aea6] text-xs my-3"></div>
             </div>
-            <div class="item-details">
+            <div class="item-details text-xs font-bold flex justify-between">
               <span class="product-name">Nome Do Produto</span>
               <button
                 class="remove-btn flex border-2 border-[#c9aea6] rounded-full p-0.5 text-xs text-black transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-black/50 active:scale-95 active:shadow-lg active:shadow-black/50"
@@ -97,19 +101,24 @@
                 </svg>
               </button>
             </div>
-            <div class="item-info">
-              <span class="quantity">2x</span>
-              <span class="unit-price">$10.00</span>
-              <span class="total-price">$20.00</span>
+            <div class="item-info text-xs">
+              <span class="quantity text-[#f44336] font-bold">2x</span>
+              <span class="unit-price text-[#c9aea6]">$10.00</span>
+              <span class="total-price text-[#ad8985]">$20.00</span>
+              <div class="border-b-2 border-[#c9aea6] text-xs my-3"></div>
             </div>
           </div>
-          <!-- Repetir para outros produtos -->
-          <p class="order-total">
-            <span>Order Total:</span> <span id="cart-total">$46.50</span>
+          <p class="order-total flex justify-between py-2">
+            <span class="text-sm">Order Total:</span>
+            <span id="cart-total" class="text-lg font-bold text-[#260f08]"
+              >$46.50</span
+            >
           </p>
         </div>
         <div>
-          <p class="carbon-neutral">
+          <p
+            class="carbon-neutral flex items-center justify-center text-xs gap-1 bg-[#fcf8f5] rounded-lg py-2 mb-3"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"
