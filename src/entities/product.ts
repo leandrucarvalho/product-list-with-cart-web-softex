@@ -25,7 +25,7 @@ export class Product {
               src="${this._imageUrl}"
               alt="${this._name}"
             />
-            <button
+            <button id="btn-add-to-cart"
               class="btn-cart bg-white border border-[#f44336] flex absolute -bottom-4 right-12 items-center justify-center gap-2 rounded-full px-6 py-2 text-xs text-black transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-black/50 active:scale-95 active:shadow-lg active:shadow-black/50 font-bold"
             >
               <svg

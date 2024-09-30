@@ -18,11 +18,16 @@
     <title>Frontend Mentor | Product list with cart</title>
   </head>
   <body>
-    <main class="main">
+    <main class="main flex flex-col min-h-screen">
       <h1 class="title text-xl font-bold">Sobremesas</h1>
       <div id="product-list" class="product-list"></div>
-      <div id="shopping-cart" class="cart">
-        <h2>Your Cart (<span id="cart-count">7</span>)</h2>
+      <div
+        id="shopping-cart"
+        class="cart sm:fixed sm:bottom-0 sm:left-0 sm:right-0 bg-white border rounded-xl p-4 flex flex-col md:p-4 md:absolute md:top-0 md:right-0 md:max-w-xs md:h-96"
+      >
+        <h2 class="font-bold text-[#f44336] text-xl">
+          Your Cart (<span id="cart-count">7</span>)
+        </h2>
         <div id="cart-items">
           <div class="cart-item">
             <div class="item-details">
