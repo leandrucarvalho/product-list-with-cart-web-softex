@@ -67,17 +67,19 @@ export class Product {
   }
 
   incrementQuantity() {
-    this._quantity += 1;
-    this.updateTotalPrice();
-
     Cart.addProduct(this);
+    this.updateTotalPrice();
   }
 
   decrementQuantity() {
-    this._quantity -= 1;
+    if (this._quantity > 0) {
+      this._quantity -= 1;
+      Cart.removeProduct(this);
+      this.updateTotalPrice();
+    }
   }
 
-  get totalPrice() {
+  get totalPrice(): number {
     return this._totalPrice;
   }
 
@@ -95,6 +97,7 @@ export class Product {
 
   set quantity(quantity: number) {
     this._quantity = quantity;
+    this.updateTotalPrice();
   }
 
   get id(): string {

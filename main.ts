@@ -21,14 +21,11 @@ function generateProducts(data: any[]): void {
 
 generateProducts(data);
 
-const banana = new Product(
-  data[0].name,
-  data[0].price,
-  data[0].category,
-  data[0].image.desktop
-);
-banana.incrementQuantity();
-banana.incrementQuantity();
+const banana = new Product("Banana", 5, "Fruta", "imagem.com");
+banana.incrementQuantity(); // Adiciona o banana ao carrinho
+banana.incrementQuantity(); // Adiciona o banana ao carrinho
+
+Cart.removeProduct(banana);
 
 // console.log(banana);
 console.log(Cart.products);
