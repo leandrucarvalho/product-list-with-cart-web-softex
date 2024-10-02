@@ -84,23 +84,10 @@ body {
 }
 
 .attribution {
-  margin-top: 50rem;
   font-size: 11px;
   text-align: center;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-@media (max-width: 768px) {
-  .product-list {
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
-  }
-}
-
-@media (max-width: 480px) {
-  .product-list {
-    grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
-  }
 }
