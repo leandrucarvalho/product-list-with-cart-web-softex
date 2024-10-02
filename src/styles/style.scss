@@ -26,22 +26,6 @@ body {
   font-family: "RedHatText", sans-serif;
 }
 
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Ajuste dinâmico */
-  gap: 20px; /* Espaçamento uniforme entre itens */
-  margin-right: 200px;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
 .container {
   display: flex;
   flex-direction: column;
