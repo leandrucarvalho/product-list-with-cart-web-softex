@@ -17,8 +17,15 @@ export class Product {
     this._imageUrl = image;
   }
 
-  render(): string {
-    return `
+  renderProduct() {
+    const productListHTML = document.querySelector(".product-list");
+
+    if (!productListHTML) return;
+
+    const productHTML = document.createElement("div");
+    productHTML.id = this._id;
+
+    productHTML.innerHTML = `
     <div class="container">
           <div class="img-food">
             <img
@@ -60,6 +67,15 @@ export class Product {
           </div>
         </div>
     `;
+
+    productHTML
+      .querySelector("#btn-add-to-cart")
+      ?.addEventListener("click", () => {
+        this.incrementQuantity();
+        console.log(`Added ${this._name} to cart. Quantity: ${this._quantity}`);
+      });
+
+    productListHTML.appendChild(productHTML);
   }
 
   updateTotalPrice() {
